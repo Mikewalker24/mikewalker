@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 950px) {
+    #home-one {
+    	flex-wrap: wrap;
+
+    	a {
+	       flex-basis: 100%;
+	       width: 100%;
+	       margin-bottom: 8%;
+    	}
+    }
+}
+
+@media screen and (max-width: 750px) {
+	#work-one {
+
+		.work-selector {
+			display: block;
+			margin-top: 0;
+			margin-bottom: 2rem;
+			width: 100%;
+		}
+
+		.work-content {
+			display: block;
+			width: 100%;
+
+			.slick-arrow {
+				display: none!important;
+
+				&::before {
+					display: none!important;
+				}
+			}
+		}
+	}
+
+	.site-footer {
+	    padding-top: 6rem;
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+	#about-one {
+		img {
+			width: 100%;
+			vertical-align: top;
+		}
+
+		.about-container {
+			padding-left: 0;
+			margin-top: 2.5rem;
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.site-header {
+		
+		.main-navigation {
+
+			padding-top: 1rem;
+			
+			ul {
+				flex-direction: column;
+
+			}
+
+			li {
+				margin-left: 0;
+				margin-bottom: 5px;
+				text-align: right;
+			}
+		}
+	}
+
+
+	#contact-one {
+		padding-top: 2rem;
+		
+		.wpcf7 {
+			    width: 100%;
+		}
+	}
+
+	.site-footer {
+		padding-top: 2rem;
+
+		.footer-nav {
+			
+			ul {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			li {
+		   		 margin-right: 0;
+		   		 margin-bottom: 0.75rem;
+			}
+		}
+	}
+}

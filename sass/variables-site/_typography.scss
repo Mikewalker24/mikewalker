@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'BentonSans BookItalic';
+	src: url('fonts/BentonSans-BookItalic.woff2') format('woff2'),
+		url('fonts/BentonSans-BookItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BentonSans Book';
+	src: url('fonts/BentonSans-Book.woff2') format('woff2'),
+		url('fonts/BentonSans-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+$font_main: 'BentonSans Book', Helvetica, sans-serif;
+$font_main-italic: 'BentonSans BookItalic', Helvetica, sans-serif;

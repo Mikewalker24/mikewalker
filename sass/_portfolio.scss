@@ -1,0 +1,160 @@
+header.portfolio-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	min-height: 60px;
+
+	i.hamburger-portfolio {
+		display: none;
+	}
+	
+	a.header-home {
+		color: #fff;
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+}
+
+h1.portfolio-header-title {
+	flex-basis: 50%;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-size: 1.3rem;
+	margin: 2.5% 0;
+}
+
+.portfolio-nav {
+	flex-basis: 25%;
+	padding-left: 3%;
+	white-space: nowrap;
+}
+
+.portfolio-social {
+	flex-basis: 25%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	i {
+		top: 0;
+	}
+	a {
+		color: #fff;
+		padding: 0 3%;
+	}
+
+	a:hover {
+		opacity: 0.3;
+	}
+}
+
+.portfolio {
+
+	h2 {
+		margin: 8% 0 2%;
+	}
+
+	p.subtitle {
+		text-align: center;
+		margin: 2.5% 0 8%;
+		font-family: 'Adobe Garamond Pro';
+		font-style: italic;
+		letter-spacing: 0.08em;
+	}
+	
+	hr {
+		width: 33%;
+		margin: 0 auto;
+	}
+
+	hr.divider {
+		width: 100%;
+		margin: 6% 0;
+	}
+
+	figure {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		figcaption {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.2s ease;
+			opacity: 0;
+			background-image: linear-gradient(to top, rgb(20,51,41), rgba(20,51,41,0.5));
+			&:hover {
+				opacity: 1;
+			}
+
+			p {
+				font-size: 2rem;
+				color: white;
+				transition: all 0.2s ease;
+				&:hover {
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+
+	img.portfolio-image {
+		width: 100%;
+		
+	}
+
+	.credit-container {
+		margin: 5% auto;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	p.credit {
+		text-align: center;
+		flex-basis: 100%;
+		font-style: italic;
+		font-family: 'Adobe Garamond Pro', Garamond, serif;
+	}
+
+	.description-container {
+		width: 66.6%;
+		margin: 0 auto;
+		text-align: left;
+
+		h3 {
+			text-transform: none;
+			font-size: 1.6rem;
+		}
+	}
+
+	.portfolio-images {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	img.description-image {
+		margin-top: 8%;
+		width: 45.5%;
+		padding: 0;
+		font-size: 0;
+		margin-bottom: 15%;
+		&:first-of-type {
+			margin-right: 2%;
+		}
+		&:last-of-type {
+			margin-left: 2%;
+		}
+	}
+}
+

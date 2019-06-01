@@ -1,0 +1,26 @@
+.nav {
+	display: inline-block;
+	padding: 2%;
+	margin-left: 2%;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+		
+		a {
+			color: #333;
+			padding: 2%;
+			color: white;
+			transition: all 0.2s ease;
+			font-family: 'Adobe Garamond Pro', Garamond, serif;
+			font-style: italic; 
+			letter-spacing: 0.08em;
+			&:hover {
+				opacity: 0.3;
+			}
+		}
+	}
+}

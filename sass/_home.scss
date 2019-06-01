@@ -1,0 +1,281 @@
+header {
+	background-color: $teal;
+	color: white;
+	i {
+		padding: 2% 1% 0 5%;
+		cursor: pointer;
+		position: relative;
+		top: 5px;
+		z-index: 10;
+		background: $teal;
+		user-select: none;
+		transition: opacity 0.2s ease;
+	}
+
+	.nav {
+		position: relative;
+		left: -100%;
+		z-index: 5;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.nav-open {
+		left: 0;
+		transition: all 0.3s ease;
+		z-index: 5;
+		white-space: nowrap;
+	}
+
+}
+
+
+section.splash {
+	background-color: $teal;
+	color: white;
+	.splash-container {
+		padding-bottom: 2%;
+		margin: 0 auto;
+	}
+
+	h1, h3 {
+		margin: 3% 0;
+		text-align: center;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-family: 'Raleway';
+		letter-spacing: 0.2em;
+		font-size: 3.25rem;
+	}
+
+	h3 {
+		letter-spacing: 0.08em;
+		color: #fff;
+	}
+
+	hr {
+		width: 33%;
+		max-width: 450px;
+	}
+
+	a {
+		color: white;
+	}
+
+	i {
+		display: block;
+		text-align: center;
+		padding: 2%;
+	}
+
+	@keyframes bounce {
+		0%, 20%, 60%, 100% {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+		40% {
+			-webkit-transform: translateY(-20px);
+			transform: translateY(-20px);
+		}
+
+		80% {
+			-webkit-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+	}
+
+	i:hover {
+		animation: bounce 1s;
+	}
+
+	// #chevron:active i {
+	// 	animation: bounce 1s;
+	// }
+
+	
+}
+
+section.recent {
+
+	.recent-container {
+		border: 1px solid $outline-grey;
+		padding: 2%;
+	}
+
+	.image-container {
+		width: 100%;
+		font-size: 0;
+	}
+	
+	figure {
+		display: inline-block;
+		width: 32%;
+		position: relative;
+		&:nth-of-type(2) {
+			margin: 0 2%;
+		}
+	}
+
+	figcaption {
+		padding: 2%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.2s ease;
+		background-color: rgba(20,51,41,0.8);
+		&:hover {
+			opacity: 1;
+		}
+
+		h2 {
+			font-size: 1.3rem;
+			color: #fff;
+			font-weight: 300;
+			margin: 0;
+			
+		}
+
+		p {
+			margin: 2% 0;
+			padding: 0;
+			font-size: 1rem;
+			font-style: italic;
+			color: #fff;
+			transition: all 0.2s ease;
+			font-family: 'Adobe Garamond Pro', Garamond, serif;
+			&:hover {
+				opacity: 0.3;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+
+}
+
+section.hi {
+	.container {
+		width: 80%;
+	}
+
+	.hi-left, .hi-right {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0;
+		width: 50%;
+	}
+	.hi-left {
+		background: #fff;
+		min-height: 450px;
+		margin: 8% 0;
+		position: relative;
+		left: 2%;
+		z-index: 10;
+		h3 {
+			margin: 1% 0;
+			font-size: 1.6rem;
+			text-transform: none;
+		}
+	}
+
+	.hi-right {
+		position: relative;
+		left: -2%;
+	}
+
+	.hi-outline {
+		padding: 5% 20% 20% 5%;
+		background: transparent;
+		border: 1px solid $outline-grey;
+		position: absolute;
+		left: 10%;
+		right: -10%;
+		top: 10%;
+		bottom: -10%;
+	}
+}
+
+section.what {
+
+	h2 {
+		text-align: right;
+		margin: 0 15% 0 0;
+		&::before {
+			display: block;
+			content: '';
+			background: $outline-grey;
+			height: 1px;
+			width: 45%;
+			margin: 0 auto;
+			position: relative;
+			top: 19px;
+		}
+
+	}
+
+	.what-container {
+		width: 38%;
+		margin: 8% auto;
+		padding: 3%;
+		position: relative;
+		&:nth-of-type(odd) h4{
+			left: 105%;
+		}
+	}
+
+	h3 {
+		text-transform: none;
+		font-size: 1.7rem;
+		margin: 2% 0;
+	}
+
+	h4 {
+		font-family: "adobe-garamond-pro", Garamond, serif;
+		font-size: 6rem;
+		margin: 4% 0;
+		position: absolute;
+		top: 25%;
+		left: -28%;
+		color: $teal;
+	}
+
+	hr {
+		width: 30%;
+		margin: 0 auto;
+		position: relative;
+		top: -10%;
+		bottom: 75px;
+	}
+
+	hr:first-of-type {
+		transform: rotate(-35deg);
+		left: 20%;
+	}
+
+	hr:nth-of-type(2) {
+		transform: rotate(35deg);
+		right: 20%;
+
+	}
+
+	hr:last-of-type {
+		display: none;
+	}
+
+	p {
+		text-align: justify;
+	}
+}
