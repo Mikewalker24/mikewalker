@@ -1,6 +1,10 @@
-<aside class="sidebar">
-	<ul>
-		<?php  dynamic_sidebar( 'primary-widget-area' ); ?>
-	</ul>
-</aside>
-	
+<?php
+/**
+ * The Template for displaying all single posts
+ *
+ *
+ * @package  WordPress
+ * @subpackage  Timber
+ */
+
+Timber::render( array( 'sidebar.twig' ), $data );

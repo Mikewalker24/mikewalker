@@ -1,25 +1,18 @@
-<?php get_header(); ?>
-<div class="main">
-	<div class="container">
+<?php
+/**
+ * Search results page
+ *
+ * Methods for TimberHelper can be found in the /lib sub-directory
+ *
+ * @package  WordPress
+ * @subpackage  Timber
+ * @since   Timber 0.1
+ */
 
-		<div class="content">
-			<?php if ( have_posts() ) : ?>
+$templates = array( 'search.twig', 'archive.twig', 'index.twig' );
+$data = Timber::get_context();
 
-				<h1>Search Results for: <?php echo get_search_query(); ?></h1>
-				<?php get_template_part( 'loop', 'search' ); ?>
+$data['title'] = 'Search results for '. get_search_query();
+$data['posts'] = Timber::get_posts();
 
-			<?php else : ?>
-
-				<h2>Nothing Found</h2>
-				<p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
-				<?php get_search_form(); ?>
-
-			<?php endif; ?>
-		</div> <!-- /.content -->
-
-		<?php get_sidebar(); ?>
-
-	</div><!-- /.container -->
-</div> <!-- /.main -->
-
-<?php get_footer(); ?>
+Timber::render( $templates, $data );

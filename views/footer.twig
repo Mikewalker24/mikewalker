@@ -1,0 +1,18 @@
+{% set footerLogo = Image(options.footer_logo) %}
+
+<a href="{{ site.link }}">
+    <img class="footer-logo" src="{{ footerLogo.src }}" alt="">
+</a>
+
+
+<div class="copyright">
+    &copy;
+    {{"now"|date('Y')}}
+    Starter
+</div>
+
+<div class="credit">
+    Site by&nbsp;
+    <a href="http://kindredstudio.ca" target="_blank">Kindred Studio</a>
+</div>
+

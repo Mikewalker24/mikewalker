@@ -1,0 +1,128 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+  <div class="main">
+
+    <div class="content">
+
+      <section class="splash" id="splash">
+
+        <div class="splash-container">
+
+          <h1>{{ post.get_field('splash_heading') }}</h1>
+
+          <hr>
+
+          <h3>{{ post.get_field('splash_subheading') }}</h3>
+
+        </div>
+
+        <a href="#recent" id="chevron">
+          <i aria-hidden="true" class="fa fa-angle-down fa-2x"></i>
+        </a>
+
+      </section>
+
+      <section class="recent" id="recent">
+
+        <h2>{{ post.get_field('recent_heading') }}</h2>
+
+        <div class="recent-container container">
+
+          <div class="image-container">
+
+            {% for image in post.get_field('recent_images') %}
+
+              <figure>
+
+                <a href="{{image.recent_url }}" target="_blank">
+
+                  <img src="{{ image.recent_image }}" alt=""></a>
+
+                <a href="{{image.recent_url}}" target="_blank">
+
+                  <figcaption>
+
+                    <h2>{{image.recent_project_title}}</h2>
+
+                    <p>{{image.recent_description}}</p>
+
+                  </figcaption>
+                </a>
+
+              </figure>
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="hi" id="hi">
+
+        <div class="container">
+
+          <div class="hi-container">
+
+            <div class="hi-left">
+
+              <div class="hi-outline">
+
+                <h3>{{ post.get_field('hi_heading') }}</h3>
+
+                {{ post.get_field('hi_copy') }}
+
+              </div>
+
+            </div><!----><div class="hi-right">
+
+              <img src="{{ post.get_field('hi_image') }}" alt="">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="what" id="what">
+
+        <div class="container">
+
+          <div class="heading-container clearfix">
+
+            <h2>{{ post.get_field('what_heading') }}</h2>
+
+          </div>
+
+          {% for item in post.get_field('what_content') %}
+
+            <div class="what-container">
+
+              <h4>{{item.what_number}}</h4>
+
+              <h3>{{item.what_subheading}}</h3>
+
+              <p>{{item.what_copy}}</p>
+
+            </div>
+
+            <hr>
+
+          {% endfor %}
+
+        </div>
+
+      </section>
+
+    </div>
+    <!-- /.content -->
+
+  </div>
+  <!-- /.main -->
+
+{% endblock %}
